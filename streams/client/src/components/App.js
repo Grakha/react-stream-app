@@ -14,12 +14,14 @@ const App = () => {
     return (
         <div className="container-fluid">
             <Router>
-                <Header />
-                <Route path="/" exact component={StreamList}>Stream List</Route>
-                <Route path="/streams/show" exact component={StreamShow}>Stream Show</Route>
-                <Route path="/streams/new" exact component={StreamCreate}>Stream Create</Route>
-                <Route path="/streams/edit" exact component={StreamEdit}>Stream Edit</Route>
-                <Route path="/streams/delete" exact component={StreamDelete}>Stream Delete</Route>
+                <div>
+                    <Header />
+                    <Route path="/" exact component={StreamList} />
+                    <Route path="/streams/show" exact component={StreamShow} />
+                    <Route path="/streams/new" exact component={StreamCreate} />
+                    <Route path="/streams/edit" exact component={StreamEdit} />
+                    <Route path="/streams/delete" exact component={StreamDelete} />
+                </div>
             </Router>
         </div>
     );
