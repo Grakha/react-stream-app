@@ -37,30 +37,43 @@ class StreamCreate extends React.Component {
 
     render () {
         return (
-            <form onSubmit={this.props.handleSubmit(this.onSubmit)}>
-                <Field
-                    name="title"
-                    component={this.inputRender}
-                    label="Enter Title"
-                    htmlFor="createTitle"
-                    inputId="createTitle"
-                />
-                <Field
-                    name="description"
-                    component={this.inputRender}
-                    label="Enter Description"
-                    htmlFor="createDescription"
-                    inputId="createDescription"
-                />
-                <button type="submit" className="btn btn-primary">Submit</button>
-            </form>
+            <div>
+                <div className="mt-3">
+                    <h4 className="lead">
+                        <strong>Create Stream</strong>
+                    </h4>
+                </div>
+                <form
+                    className="p-3"
+                    onSubmit={this.props.handleSubmit(this.onSubmit)}
+                >
+                    <Field
+                        name="title"
+                        component={this.inputRender}
+                        label="Enter Title"
+                        htmlFor="createTitle"
+                        inputId="createTitle"
+                    />
+                    <Field
+                        name="description"
+                        component={this.inputRender}
+                        label="Enter Description"
+                        htmlFor="createDescription"
+                        inputId="createDescription"
+                    />
+                    <button
+                        type="submit"
+                        className="btn btn-primary pl-4 pr-4"
+                    >Submit</button>
+                </form>
+            </div>
         );
     }
 };
 
 const validate = (values) => {
     const errors = {};
-    console.log(values.name);
+
     if(!values.title) {
         errors.title = 'Please Enter a Title';
     }

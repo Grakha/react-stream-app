@@ -8,7 +8,7 @@ import {
 } from '../actions/types';
 
 
-export default (state = {}, action) => {
+const streamReducer = (state = {}, action) => {
     switch(action.type) {
         case FETCH_STREAMS:
             return { ...state, ..._.mapKeys(action.payload, 'id')};
@@ -25,3 +25,5 @@ export default (state = {}, action) => {
     }
 
 };
+
+export default streamReducer;
