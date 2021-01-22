@@ -61,10 +61,12 @@ class StreamCreate extends React.Component {
                         htmlFor="createDescription"
                         inputId="createDescription"
                     />
-                    <button
-                        type="submit"
-                        className="btn btn-primary pl-4 pr-4"
-                    >Submit</button>
+                    <div className="d-flex justify-content-end">
+                        <button
+                            type="submit"
+                            className="btn btn-primary pl-4 pr-4"
+                        >Submit Form</button>
+                    </div>
                 </form>
             </div>
         );

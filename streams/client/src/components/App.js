@@ -1,6 +1,6 @@
 import React from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
-
+import { Router, Route } from 'react-router-dom';
+import history from "../history";
 import StreamList from "./streams/StreamList";
 import StreamShow from "./streams/StreamShow";
 import StreamCreate from "./streams/StreamCreate";
@@ -13,7 +13,7 @@ import Header from "./Header";
 const App = () => {
     return (
         <div className="container-fluid">
-            <Router>
+            <Router history={history}>
                 <div>
                     <Header />
                     <Route path="/" exact component={StreamList} />
