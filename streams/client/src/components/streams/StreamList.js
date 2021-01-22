@@ -29,11 +29,7 @@ class StreamList extends React.Component {
         if(stream.userId === this.props.curUserId) {
             return (
                 <div className="d-flex">
-                    <button
-                        type="button"
-                        className="btn btn-primary pl-4 pr-4"
-                    >Edit
-                    </button>
+                    <Link to={`/streams/edit/${stream.id}`} className="btn btn-primary pl-4 pr-4">Edit</Link>
                     <button
                         type="button"
                         className="btn btn-danger pl-3 pr-3 ml-3"
