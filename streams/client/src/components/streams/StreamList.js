@@ -30,11 +30,11 @@ class StreamList extends React.Component {
             return (
                 <div className="d-flex">
                     <Link to={`/streams/edit/${stream.id}`} className="btn btn-primary pl-4 pr-4">Edit</Link>
-                    <button
+                    <Link to={`/streams/delete/${stream.id}`}
                         type="button"
                         className="btn btn-danger pl-3 pr-3 ml-3"
                     >Delete
-                    </button>
+                    </Link>
                 </div>
             );
         }

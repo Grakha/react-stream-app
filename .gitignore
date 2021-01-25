@@ -2,8 +2,7 @@
 /.idea
 /.git
 # dependencies
-./streams/node_modules
-./api-server/node_modules
+/streams/**/node_modules/
 
 # testing
 /coverage
@@ -11,6 +10,9 @@
 
 # production
 /build
+
+# client
+/streams/client/src/apis/clientId.js
 
 
 # misc
