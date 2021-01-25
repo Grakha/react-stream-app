@@ -16,7 +16,9 @@ class StreamList extends React.Component {
                 <li className="d-flex align-items-center list-group-item mb-2" key={stream.id}>
                     <i className="fas fa-2x fa-video"></i>
                     <div className="ml-3 mr-auto">
-                        <h6 className="mb-1">{stream.title}</h6>
+                        <Link to={`/streams/${stream.id}`}>
+                            <h6 className="mb-1 d-inline-block text-dark">{stream.title}</h6>
+                        </Link>
                         <p className="mb-0">{stream.description}</p>
                     </div>
                     {this.renderAdmin(stream)}
